@@ -21,7 +21,11 @@
 
         <div>
             <!-- Upvote Component -->
-            <div v-for="submission in sortedSubmissions" v-bind:key="submission.id" class="w-2/5 flex relative mx-auto mb-6 bg-gray-100 px-6 py-4 rounded">
+            <div 
+                v-for="submission in sortedSubmissions" 
+                v-bind:key="submission.id" 
+                class="w-2/5 flex relative mx-auto mb-6 bg-gray-100 px-6 py-4 rounded"
+                v-bind:class="{ 'border-2 border-blue-600': submission.votes >= 20 }" >
 
                 <div class="mr-2">
 
