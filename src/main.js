@@ -5,13 +5,13 @@ const submissionComponent = {
         <div class="flex">
             <div class="mr-2">
 
-                <img class="w-16 h-16 rounded" v-bind:src="submission.submissionImage" alt="">
+                <img class="w-16 h-16 rounded" :src="submission.submissionImage" alt="">
 
             </div>
 
             <div>
                 <div class="flex items-center">
-                    <a v-bind:href="submission.url" class="mr-1 inline font-bold text-blue-600 text-base">
+                    <a :href="submission.url" class="mr-1 inline font-bold text-blue-600 text-base">
                         {{ submission.title }}</a>
                     <span
                         class="bg-gray-300 px-1 text-xs text-gray-500 font-bold rounded">#{{ submission.id }}</span>
@@ -24,7 +24,7 @@ const submissionComponent = {
 
                     <h6 class="mr-1 text-xs text-gray-600 ">Submitted by :</h6>
 
-                    <img class="h-6 w-6 rounded-full" v-bind:src="submission.avatar" alt="">
+                    <img class="h-6 w-6 rounded-full" :src="submission.avatar" alt="">
 
                 </div>
 
@@ -34,7 +34,7 @@ const submissionComponent = {
 
                 <div class="flex items-center justify-center">
 
-                    <button v-on:click="upvote(submission.id)">
+                    <button @click="upvote(submission.id)">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline " fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
